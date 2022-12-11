@@ -16,6 +16,7 @@ import com.lnsantos.shrineincompose.ui.theme.ShrineInComposeTheme
 
 @Composable
 fun RowCart(
+    quantity: Int = 0,
     onClick: () -> Unit
 ) {
     Row(
@@ -29,9 +30,9 @@ fun RowCart(
             )
         }
         Spacer(modifier = Modifier.padding(vertical = 8.dp))
-        Text(text = "Cart".uppercase(), fontWeight = FontWeight.Bold)
+        Text(text = "Carrinho".uppercase(), fontWeight = FontWeight.Bold)
         Spacer(modifier = Modifier.padding(start = 16.dp))
-        Text(text = "2 Items".uppercase())
+        Text(text = "$quantity Items".uppercase())
     }
 }
 
