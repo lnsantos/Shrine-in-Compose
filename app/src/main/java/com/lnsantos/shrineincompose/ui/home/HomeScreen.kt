@@ -21,7 +21,7 @@ fun HomeScreen() {
             HomeAppBar { coroutineScope changeStateBackdrop scaffoldState }
         },
         backLayerContent = { HomeMenuList() },
-        frontLayerContent = { CartScreen() },
+        frontLayerContent = { CartScreen { coroutineScope changeStateBackdrop scaffoldState } },
         scaffoldState = scaffoldState,
         frontLayerShape = MaterialTheme.shapes.large
     )

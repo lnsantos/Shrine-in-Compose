@@ -14,12 +14,12 @@ import androidx.compose.ui.unit.dp
 import com.lnsantos.shrineincompose.ui.theme.ShrineInComposeTheme
 
 @Composable
-fun CartScreen() {
+fun CartScreen(onClickMenu: () -> Unit = {}) {
     Surface() {
         Column(
             Modifier.fillMaxSize()
         ) {
-            RowCart(quantity = fakeCartItems.size) {}
+            RowCart(quantity = fakeCartItems.size, onClickMenu)
             ListCart(fakeCartItems) {}
             Button(onClick = {}, Modifier.fillMaxWidth().padding(16.dp)) {
                 Text(text = "Confirmar compra")
